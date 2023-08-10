@@ -1,0 +1,110 @@
+[versions]
+agp = "8.1.0"
+kotlin = "1.9.0"
+core-ktx = "1.10.1"
+junit = "4.13.2"
+androidx-test-ext-junit = "1.1.5"
+espresso-core = "3.5.1"
+lifecycle-runtime-ktx = "2.6.1"
+activity-compose = "1.7.2"
+compose-bom = "2023.08.00"
+compose-compiler = "1.5.0"
+hilt = "2.47"
+hiltCompiler = "1.0.0"
+hiltNavigation = "1.0.0"
+kotlin-serialization = "1.9.0-Beta"
+ksp = "1.9.0-1.0.12"
+klint = "11.0.0"
+destinations = "1.9.51"
+coil = "2.4.0"
+accompanist = "0.30.1"
+gms = "18.1.0"
+mockk = "1.13.5"
+retrofit = "2.9.0"
+firebase-bom = "32.2.2"
+androidxMacroBenchmark = "1.2.0-beta01"
+androidxAppCompat = "1.6.1"
+androidxComposeRuntimeTracing = "1.0.0-alpha03"
+androidxLifecycle = "2.6.1"
+testingCoroutin = "1.7.3"
+hiltWorker = "1.0.0"
+composeMap = "2.13.0"
+androidxNavigation = "2.7.0"
+androidxPalette = "1.0.0"
+androidxWorker = "2.8.1"
+androidxSplash = "1.0.1"
+
+[libraries]
+#AndroidX
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
+lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle-runtime-ktx" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidxAppCompat" }
+androidx-palette = { group = "androidx.palette", name = "palette", version.ref = "androidxPalette" }
+androidx-worker = { group = "androidx.work", name = "work-runtime-ktx", version.ref = "androidxWorker" }
+androidx-core-splash = { group = "androidx.core", name = "core-splashscreen", version.ref = "androidxSplash" }
+
+#Google
+accompanist-navigation-material = { group = "com.google.accompanist", name = "accompanist-navigation-material", version.ref = "accompanist" }
+accompanist-systemuicontroller = { group = "com.google.accompanist", name = "accompanist-systemuicontroller", version.ref = "accompanist" }
+accompanist-navigation-animation = { group = "com.google.accompanist", name = "accompanist-navigation-animation", version.ref = "accompanist" }
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebase-bom" }
+google-map-service = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "gms" }
+ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+
+#Retrofit
+retrofit-core = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+
+#Testing
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
+mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
+
+#Compose
+compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose-bom" }
+ui = { group = "androidx.compose.ui", name = "ui" }
+ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+material3 = { group = "androidx.compose.material3", name = "material3" }
+activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity-compose" }
+androidx-compose-foundation = { group = "androidx.compose.foundation", name = "foundation" }
+androidx-compose-runtime = { group = "androidx.compose.runtime", name = "runtime" }
+androidx-lifecycle-runtimeCompose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidxLifecycle" }
+androidx-compose-runtime-livedata = { group = "androidx.compose.runtime", name = "runtime-livedata" }
+androidx-compose-runtime-tracing = { group = "androidx.compose.runtime", name = "runtime-tracing", version.ref = "androidxComposeRuntimeTracing" }
+androidx-lifecycle-viewModelCompose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "androidxLifecycle" }
+androidx-navigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "androidxNavigation" }
+compose-map = { group = "com.google.maps.android", name = "maps-compose", version.ref = "composeMap" }
+
+#Hilt
+hilt-group = { group = "com.google.dagger", name = "hilt" }
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
+hilt-worker = { group = "androidx.hilt", name = "hilt-work", version.ref = "hiltWorker" }
+androidx-hilt-compiler = { group = "androidx.hilt", name = "hilt-compiler", version.ref = "hiltCompiler" }
+androidx-hilt-navigation = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigation" }
+
+#Destinations
+destinations-core = { group = "io.github.raamcosta.compose-destinations", name = "core", version.ref = "destinations" }
+destinations-ksp = { group = "io.github.raamcosta.compose-destinations", name = "ksp", version.ref = "destinations" }
+
+#Coil
+coil = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
+
+#JetBrains
+testing-coroutins = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "testingCoroutin" }
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin-serialization" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+klint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "klint" }
+
+[bundles]
+
