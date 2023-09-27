@@ -1,6 +1,7 @@
 package com.example.mvi_jetpackcompose.core.presentation.base
 
 import androidx.annotation.CallSuper
+import androidx.compose.runtime.collectAsState
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.mvi_jetpackcompose.core.data.remote.ErrorResponse
@@ -15,7 +16,9 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
@@ -23,7 +26,9 @@ import javax.inject.Inject
 import kotlin.coroutines.cancellation.CancellationException
 
 abstract class BaseViewModel<ViewAction : BaseAction<ViewState>, ViewState> : ViewModel() {
-    abstract val viewState: StateFlow<ViewState>
+    protected abstract val _viewState: MutableStateFlow<ViewState>
+    val viewState by lazy { _viewState.asStateFlow() }
+
     private val actionSubject: MutableSharedFlow<ViewAction> = MutableSharedFlow()
     private val exceptionHandler = CoroutineExceptionHandler { _, exception ->
         exception.logMessage.log("view model exception")

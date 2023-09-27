@@ -11,13 +11,13 @@ import javax.inject.Inject
 class HomeViewModel @Inject constructor(
     private val getBooks: GetBooksUseCase,
 ) : BaseViewModel<HomeAction, HomeState>() {
-    override var viewState = MutableStateFlow(HomeState())
+    override var _viewState = MutableStateFlow(HomeState())
 
     override fun onActionReceived(viewAction: HomeAction) {
         super.onActionReceived(viewAction)
         when(viewAction){
             is HomeAction.ChangeDrawerState ->{
-                viewState.update { it.copy(isBottomSheetOpen = viewAction.isOpen) }
+//                _viewState.update { it.copy(isBottomSheetOpen = viewAction.isOpen) }
             }
             else->{
 

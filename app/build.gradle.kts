@@ -97,6 +97,5 @@ dependencies {
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
-    androidTestImplementation(libs.ui.test.junit4)
     debugImplementation(libs.ui.test.manifest)
 }
